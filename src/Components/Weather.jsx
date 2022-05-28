@@ -43,7 +43,14 @@ export const Weather = () => {
           <p>
             {dataWheather.next_days
               ? dataWheather.next_days.map((elem, index) => (
-                  <img key={index} src={elem.iconURL} />
+                  <div style={{ display: 'inline-block' }}>
+                    <img key={index} src={elem.iconURL} />
+
+                    <p>
+                      {' '}
+                      {elem.max_temp.c}C - {elem.max_temp.c} F
+                    </p>
+                  </div>
                 ))
               : null}
           </p>
